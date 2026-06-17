@@ -1,0 +1,32 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[date]
+command=date '+%A, %B %d'
+interval=60
+align=center
+
+[time]
+command=date '+%r'
+interval=1
+
+[battery]
+command=~/.config/scripts/display_battery.sh
+interval=60
+
+[power]
+# there is a space after the symbol on this line
+full_text=󰐥 
+command=rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu
+markup=pango
+align=center
+
